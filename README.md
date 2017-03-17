@@ -8,7 +8,7 @@ A mock site to search for doctors that treat your specific symptoms.
 
 # Specs
 
-- User can input a symptom (ie. "toothache") into a form
+- User can input a symptom (e.g. "toothache") into a form
 - Input will search betterdoctor.com
 - Result will display doctors who treat your symptom
 
