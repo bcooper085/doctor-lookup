@@ -4,7 +4,7 @@ exports.apiKey = "19478a44178f1a8663d1322d8f54f4a7";
 },{}],2:[function(require,module,exports){
 var apiKey = require('./../.env').apiKey;
 
-searchDoctors = function(symptom, displayResults) {
+var searchDoctors = function(symptom, displayResults) {
   $.get('https://api.betterdoctor.com/2016-03-01/doctors?query='+ symptom +'&location=45.5231%2C-122.6765%2C%205&user_location=45.5231%2C-122.6765&skip=0&limit=20&user_key=' + apiKey).then(function(response) {
        console.log(response);
        displayResults(response);
@@ -22,7 +22,9 @@ var apiKey = require('./../.env').apiKey;
 function doctorList(response){
   response.data.forEach(function(res) {
     var doctorName = res.profile.first_name + " " + res.profile.last_name;
-    $('#all-doctors').append("<li><button class='btn' type='button' value=\"" + doctorName + "\">" + "Doctor:" + doctorName + "</button></li>");
+    var gender = res.profile.gender;
+    var bio = res.profile.bio;
+    $('#all-doctors').append("<li>" + "Doctor: " + doctorName + "<br>Gender: " + gender + "<br><img src="  + res.profile.image_url + ">" + "<br>Bio: " + bio + "</li><br>");
   });
 }
 

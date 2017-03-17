@@ -4,7 +4,9 @@ var apiKey = require('./../.env').apiKey;
 function doctorList(response){
   response.data.forEach(function(res) {
     var doctorName = res.profile.first_name + " " + res.profile.last_name;
-    $('#all-doctors').append("<li><button class='btn' type='button' value=\"" + doctorName + "\">" + "Doctor:" + doctorName + "</button></li>");
+    var gender = res.profile.gender;
+    var bio = res.profile.bio;
+    $('#all-doctors').append("<li>" + "Doctor: " + doctorName + "<br>Gender: " + gender + "<br><img src="  + res.profile.image_url + ">" + "<br>Bio: " + bio + "</li><br>");
   });
 }
 
