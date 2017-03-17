@@ -24,7 +24,7 @@ function doctorList(response){
     var doctorName = res.profile.first_name + " " + res.profile.last_name;
     var gender = res.profile.gender;
     var bio = res.profile.bio;
-    $('#all-doctors').append("<li>" + "Doctor: " + doctorName + "<br>Gender: " + gender + "<br><img src="  + res.profile.image_url + ">" + "<br>Bio: " + bio + "</li><br>");
+    $('#all-doctors').append("<li>" + "Doctor: " + doctorName + "<br><span class='bio-pic'><img src=" + res.profile.image_url + ">" + "</span>" + "<br>Gender: " + gender + "<br>Bio: " + bio + "</li><br>");
   });
 }
 

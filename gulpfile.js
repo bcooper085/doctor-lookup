@@ -6,6 +6,8 @@ var uglify = require('gulp-uglify');
 var utilities = require('gulp-util');
 var del = require('del');
 var jshint = require('gulp-jshint');
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 var lib = require('bower-files')({
   "overrides":{
     "bootstrap" : {
@@ -19,9 +21,6 @@ var lib = require('bower-files')({
 });
 
 var browserSync = require('browser-sync').create();
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-
 var buildProduction = utilities.env.production;
 
 gulp.task('bower', ['bowerJS', 'bowerCSS']);
