@@ -6,11 +6,21 @@
 # Description
 A mock site to search for doctors that treat your specific symptoms.
 
-# Specs
+# Specifications
 
 - User can input a symptom (e.g. "toothache") into a form
 - Input will search betterdoctor.com
 - Result will display doctors who treat your symptom
+- Result will display list of up to 20 matches
+- Results include name, gender, pic and bio
+
+# Technologies Used
+- JavaScript
+- HTML
+- SCSS
+- node.js
+- bower
+- gulp
 
 # Known Bugs
 No known bugs.
