@@ -9,5 +9,4 @@ searchDoctors = function(symptom, displayResults) {
      });
 };
 
-
 exports.searchModule = searchDoctors;
